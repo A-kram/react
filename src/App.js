@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './index.scss';
 
 
-const Modal = ({ open, setOpen })=> {
+const Modal = ({ open, setOpen })=> (
   
   <div className={`overlay animated ${open ? "show" : ""}` }>
     <div className="modal">
@@ -15,14 +15,16 @@ const Modal = ({ open, setOpen })=> {
   </div>
   
 
-}
+);
+
+
 
 function App() {
   const [open, setOpen] = React.useState(false);
   return (
     <div className="App">
       <button onClick = {()=>setOpen(true) } className="open-modal-btn">✨ Открыть окно</button>
-      { open && <Modal open={open} setOpen={setOpen}/> }
+      <Modal open={open} setOpen={setOpen}/> 
     </div>
   );
 }
