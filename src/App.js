@@ -19,7 +19,7 @@ function App() {
         <h2>Счетчик:</h2>
         <h1>{count}</h1>
         <button onClick={onClickMinus} className="minus">- Минус</button>
-        <button onClick={onClickPlus} className="plus">Плс +</button>
+        <button onClick={onClickPlus} className="plus">Плюс +</button>
       </div>
     </div>
   );
